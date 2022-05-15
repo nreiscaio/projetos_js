@@ -12,35 +12,93 @@
 
     <title>Atividade 08</title>
 
-    <script>
+    <style>
 
-        function foco(bgRetangulo) {
-            document.getElementById(`input`).style.backgroundColor = bgRetangulo
+        p {
+            background: rgb(202, 202, 202);
+        }
+        
+        section {
+            background: rgb(73, 73, 252);
         }
 
-        function perdaFoco() {
-            let input = document.getElementById(`input`).value
-            alert(input)
+        .valor {
+            background: rgb(41, 41, 41);
         }
-    </script>
+    </style>
+
+    
 </head>
 
 <body>
+
+    <main class="container contorno">
+
+        <section class="row bg contorno">
+
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-6 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-4 p-2 bg contorno"><p id="tela"></p></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-1 bg contorno"></article>
+            <article class="col-2 p-1 bg contorno"><button onclick="cancel()" id="cancel" class="bg-warning">C</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`/`)" id="divisao" class="bg-info">/</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`*`)" id="multiplicacao" class="bg-info">x</button></article>
+            <article class="col-5 p-1 bg contorno"></article>
+            <article class="col-3 p-1 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`7`)" class="valor">7</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`8`)" class="valor">8</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`9`)" class="valor">9</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`-`)" class="bg-info">-</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`4`)" class="valor">4</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`5`)" class="valor">5</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`6`)" class="valor">6</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`+`)" class="bg-info">+</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`1`)" class="valor">1</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`2`)" class="valor">2</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`3`)" class="valor">3</button></article>
+            <article class="col-1 p-4 bg contorno"><button onclick="calcular()" class="bg-success">=</button></article>
+            <article class="col-5 p-2 bg contorno"></article>
+            <article class="col-3 p-2 bg contorno"></article>
+            <article class="col-2 p-2 bg contorno"><button onclick="valor(`0`)" class="valor">0</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`.`)" class="valor">.</button></article>
+            <article class="col-1 p-2 bg contorno"></article>
+            <article class="col-5 p-2 bg contorno"></article>
+
+
+        </section>
+
+        <script>
+
+            function valor(num) {
+                //Pega o botão que foi clicado e armazena na variável
+                var numero = document.getElementById('tela').innerHTML
     
-    <main class="container">
-
-        <header>
-
-            <h1 class="display-6">Atividade 01</h1>
-            <hr>
-        </header>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Insira qualquer texto</span>
-            </div>
-            <input type="text" onfocus="foco(`#33E601`)" onblur="perdaFoco()" id="input">
-        </div>
+                //Insere na tela um numero na frente do outro
+                document.getElementById('tela').innerHTML = numero + num
+            }
+    
+            function cancel() {
+                //limpar tudo que foi digitado
+                document.getElementById('tela').innerHTML = ''
+            }
+    
+            function calcular() {
+                //pega a expressão que está na tela e armazena na variável
+                let resultado = document.getElementById('tela').innerHTML
+    
+                //se tiver uma expressão na tela calcula a expressão
+                if (resultado) {
+                    document.getElementById('tela').innerHTML = eval(resultado)
+                }
+            }
+        </script>
     </main>
 
 
@@ -73,5 +131,3 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
-
-</html>
