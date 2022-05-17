@@ -13,6 +13,9 @@
     <title>Atividade 08</title>
 
     <style>
+        * {
+            text-align: center;
+        }
 
         p {
             background: rgb(202, 202, 202);
@@ -43,31 +46,31 @@
             <article class="col-4 p-2 bg contorno"><p id="tela"></p></article>
             <article class="col-5 p-2 bg contorno"></article>
             <article class="col-3 p-1 bg contorno"></article>
-            <article class="col-2 p-1 bg contorno"><button onclick="cancel()" id="cancel" class="bg-warning">C</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`/`)" id="divisao" class="bg-info">/</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`*`)" id="multiplicacao" class="bg-info">x</button></article>
+            <article class="col-2 p-1 bg contorno"><button onclick="cancel()" id="cancel" class="bg-warning" style="width: 200px; height: 50px;">C</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`/`)" id="divisao" class="bg-info" style="width: 50px; height: 50px;">/</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`*`)" id="multiplicacao" class="bg-info" style="width: 50px; height: 50px;">x</button></article>
             <article class="col-5 p-1 bg contorno"></article>
             <article class="col-3 p-1 bg contorno"></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`7`)" class="valor">7</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`8`)" class="valor">8</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`9`)" class="valor">9</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`-`)" class="bg-info">-</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`7`)" class="valor" style="width: 50px; height: 50px;">7</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`8`)" class="valor" style="width: 50px; height: 50px;">8</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`9`)" class="valor" style="width: 50px; height: 50px;">9</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`-`)" class="bg-info" style="width: 50px; height: 50px;">-</button></article>
             <article class="col-5 p-2 bg contorno"></article>
             <article class="col-3 p-2 bg contorno"></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`4`)" class="valor">4</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`5`)" class="valor">5</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`6`)" class="valor">6</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`+`)" class="bg-info">+</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`4`)" class="valor" style="width: 50px; height: 50px;">4</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`5`)" class="valor" style="width: 50px; height: 50px;">5</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`6`)" class="valor" style="width: 50px; height: 50px;">6</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`+`)" class="bg-info" style="width: 50px; height: 50px;">+</button></article>
             <article class="col-5 p-2 bg contorno"></article>
             <article class="col-3 p-2 bg contorno"></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`1`)" class="valor">1</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`2`)" class="valor">2</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`3`)" class="valor">3</button></article>
-            <article class="col-1 p-4 bg contorno"><button onclick="calcular()" class="bg-success">=</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`1`)" class="valor" style="width: 50px; height: 50px;">1</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`2`)" class="valor" style="width: 50px; height: 50px;">2</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`3`)" class="valor" style="width: 50px; height: 50px;">3</button></article>
+            <article class="col-1 p-4 bg contorno"><button onclick="calcular()" class="bg-success" style="width: 50px; height: 50px;">=</button></article>
             <article class="col-5 p-2 bg contorno"></article>
             <article class="col-3 p-2 bg contorno"></article>
-            <article class="col-2 p-2 bg contorno"><button onclick="valor(`0`)" class="valor">0</button></article>
-            <article class="col-1 p-2 bg contorno"><button onclick="valor(`.`)" class="valor">.</button></article>
+            <article class="col-2 p-2 bg contorno"><button onclick="valor(`0`)" class="valor" style="width: 50px; height: 50px;">0</button></article>
+            <article class="col-1 p-2 bg contorno"><button onclick="valor(`.`)" class="valor" style="width: 50px; height: 50px;">.</button></article>
             <article class="col-1 p-2 bg contorno"></article>
             <article class="col-5 p-2 bg contorno"></article>
 
