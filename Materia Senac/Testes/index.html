@@ -10,56 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Alterando Elementos</title>
-
-    <script>
-
-        //Criando a função separarCaractere()
-        function separarCaracter(opa) {
-
-            //Pegando o valor digitado com seleção do elemento ID
-            //docment.getElementById(`caracter`).value
-
-            //Depurar: console.log(docment.ElementById(`caracter`).value)
-
-            //Colocar esse caracter dentro de uma variável
-            
-
-            //Limpar o campo de digitação
-           
-
-            //Limpar os epaços em branco antes e depois do caractere
-            
-
-            //Condicional
-            switch (opa) {
-                //Como a entrada é uma string precisamos tráta-la como tal
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case `4`:
-                case `5`:
-                case `6`:
-                case `7`:
-                case `8`:
-                case `9`:
-                    //Coolocar o número no local indicado
-                    document.getElementById(`numero`).value += digito
-                    break
-
-                default:
-                    //Colocar a letra no local indicado
-                    document.getElementById(`letra`).value += digito
-            }
-        }
-
-        function limpar() {
-            //Limpar o campo de digitação
-            document.getElementById(`letra`).value = ` `
-            document.getElementById(`numero`).value = ` `
-        }
-    </script>
+    <title></title>
 </head>
 
 <body>
@@ -68,33 +19,71 @@
 
         <header>
 
-            <h1 class="display-5 ps-4 pt-4">Alterando os valores do elemento do DOM</h1>
+            <h1 class="display-4">Bem vindo ao portal matemático!</h1>
             <hr>
         </header>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Insira qualquer texto</span>
-            </div>
-            <button value="2" class="form-control" placeholder="Digite alguma coisa" onkeyup="separarCaracter(`2`)" id="caracter">2</button>
-        </div>
+        <section>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Letras</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Digite alguma coisa" disabled="disabled" id="letra">
-        </div>
+            <h1 class="display-6">Equação 2º Grau</h1>
+            <hr>
+            <p>A equação do 2º grau é representada por: ax²+bx+c=0. A equação de 2º grau pode ser representada por
+                ax²+bx+c=0, em que os coeficientes a, b e c são números reais, com a ≠ 0</p>
+                <article><img src="img/img01.webp" alt=""></article>
+            <br>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Números</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Digite alguma coisa" disabled="disabled" id="numero">
-        </div>
+            <input type="value" placeholder="Insira o valor de A" id="firstValor">
+            <input type="value" placeholder="Insira o valor de B" id="secondValor">
+            <input type="value" placeholder="Insira o valor de C" id="tirdValor">
+            <button onclick="calcular()">Calcular</button>
 
-        <label class="btn btn-dark" onclick="limpar()">Limpar</label>
+            <h1 class="display-8">Resultado:</h1>
+            <p>X1: </p><input type="text" id="resultado1" disabled>
+            <p>X2: </p><input type="text" id="resultado2" disabled>
+
+            <script>
+
+                function calcular() {
+                    let a = document.getElementById(`firstValor`).value
+                    let b = document.getElementById(`secondValor`).value
+                    let c = document.getElementById(`tirdValor`).value
+
+                    a = parseFloat(a)
+                    b = parseFloat(b)
+                    c = parseFloat(c)
+
+                    let x1 = (-b + ((Math.pow(b, 2)) - 4 * a *c)) / (2 * a)
+                    let x2 = (-b - ((Math.pow(b, 2)) - 4 * a *c)) / (2 * a)
+
+                    document.getElementById(`resultado1`).value = x1
+                    document.getElementById(`resultado2`).value = x2
+
+                    document.getElementById(`firstValor`).value = ` `
+                    document.getElementById(`secondValor`).value = ` `
+                    document.getElementById(`tirdValor`).value = ` `
+                }
+            </script>
+        </section>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--Bootstrap NÃO APAGAR-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
