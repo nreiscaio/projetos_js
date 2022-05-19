@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Javascript</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+
+            <h1 class="display-4">Bem vindo ao portal matemático!</h1>
+            <hr>
+        </header>
+
+        <section>
+
+            <h1 class="display-6">Produto</h1>
+            <hr>
+            <p>A multiplicação é uma dentre as quatro operações básicas da Matemática. Conhecemos como multiplicação a
+                soma sucessiva de um número por ele mesmo. Para fazer a representação da multiplicação entre dois
+                números, utilizamos o símbolo “×” ou o símbolo “·”. O resultado da multiplicação é conhecido como
+                produto, e os números que serão multiplicados são chamados de fatores.</p>
+            <article>1 x 1 = 1</article>
+            <article>2 x 1 = 2</article>
+            <article>3 x 1 = 3</article>
+            <article>4 x 1 = 4</article>
+            <article>5 x 1 = 5</article>
+            <article>6 x 1 = 6</article>
+            <article>7 x 1 = 7</article>
+            <article>8 x 1 = 8</article>
+            <article>9 x 1 = 9</article>
+            <article>10 x 1 = 10</article>
+            <br>
+
+            <input type="value" placeholder="Insira o primeiro valor" id="firstValor">
+            <input type="value" placeholder="Insira o segundo valor" id="secondValor">
+            <button onclick="calcular()">Calcular</button>
+
+            <script>
+
+                function calcular() {
+                    let digito1 = document.getElementById(`firstValor`).value
+                    let digito2 = document.getElementById(`secondValor`).value
+
+                    digito1 = parseFloat(digito1)
+                    digito2 = parseFloat(digito2)
+
+                    produto = digito1 * digito2
+                    console.log(produto)
+
+                    document.write(produto)
+                    document.write(`<br>`)
+                    document.write(`<button><a href="produto.html">Voltar</a></button>`)
+                }
+            </script>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7-zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG-2QOK9T-ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

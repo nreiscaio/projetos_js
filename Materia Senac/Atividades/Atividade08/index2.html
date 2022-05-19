@@ -22,6 +22,7 @@
 
         button {
             border: 0;
+            box-shadow: 3px 3px #000000;
         }
 
         input {
@@ -29,10 +30,12 @@
             width: 100%;
             height: 150%;
             padding: 5px;
+            box-shadow: 3px 3px #000000;
+            text-align: right;
         }
         
         .bg {
-            background: rgb(73, 73, 252);
+            background: #195973;
         }
 
         .valor {
@@ -56,7 +59,7 @@
         #visor {
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-            background: rgb(73, 73, 252);
+            background: #195973;
         }
 
         #igual {
@@ -64,6 +67,7 @@
             height: 440%;
             position: relative;
             border-radius: 10px;
+            box-shadow: 3px 3px #000000;
         }
 
         .tamanho {
@@ -84,7 +88,7 @@
             <article class="col-6 p-2"></article>
             <article class="col-3 p-2"></article>
             <article class="col-3 p-2"></article>
-            <article class="col-4 p-5 bg" id="visor"><input type="text" id="tela" disabled></article>
+            <article class="col-4 p-5 bg" id="visor"><input type="text" id="tela" disabled placeholder="0"></article>
             <article class="col-5 p-2"></article>
             <article class="col-3 p-1"></article>
             <article class="col-2 p-1 bg"><button onclick="cancel()" id="cancel" class="bg-warning operadores" style="width: 100%; height: 50px;"><strong>C</strong></button></article>
